@@ -1,0 +1,3 @@
+guard 'cucumber' do
+  watch('db/schema.rb')                           { "database schema" }
+end
