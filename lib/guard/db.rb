@@ -1,4 +1,4 @@
-require "db/version"
+#require "db/version"
 
 # encoding: utf-8
 require 'guard'
