@@ -46,7 +46,7 @@ module Guard
       UI.info "Guard::Db is watching changes in the database schema"
       started_at = Time.now
       @result = system("bundle exec rake db:test:clone")
-      #Notifier::notify( @result, Time.now - started_at ) if notify?
+      ::Guard::Notifier.notify( @result, Time.now - started_at ) #if notify?
       
       @result
     end
