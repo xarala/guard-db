@@ -5,7 +5,7 @@ require "guard/db/version"
 Gem::Specification.new do |s|
   s.name        = "guard-db"
   s.version     = Guard::Db::VERSION
-  s.authors     = ["Papa Pathé SENE"]
+  s.authors     = ["Xarala"]
   s.email       = ["pathe.sene@xarala.sn"]
   s.homepage    = ""
   s.summary     = %q{GuarDb: is a guard extension handling the rake db:clone:test when schema.rb changes}
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
+  s.add_development_dependency "guard"
   # s.add_runtime_dependency "rest-client"
 end

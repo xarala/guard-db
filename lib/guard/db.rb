@@ -43,12 +43,13 @@ module Guard
     private
 
     def run_db_test_clone
-      UI.info "Guard::Db is watching changes in the database schema"
+      UI.info "Guard::Db is running rake db:test:clone"
       started_at = Time.now
       @result = system("bundle exec rake db:test:clone")
-      #::Guard::Notifier.notify( @result, :title => 'Cloned current schema in test db' ) #if notify?
-      
-      #@result
+      #::Guard::Notifier.notify( @result, :title => 'Cloned current schema in test db' ) #if notify?      
+      ended_at = Time.now      
+      UI.info "rake db:test:clone done in #{Time.now - started_at} seconds"
+      @result
     end
         
   end
