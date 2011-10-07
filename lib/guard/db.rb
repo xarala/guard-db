@@ -27,7 +27,7 @@ module Guard
     end
     
     def run_all
-      rugem pus n_db_test_clone
+      run_db_test_clone
     end
     
     def run_on_change(paths)
@@ -47,8 +47,7 @@ module Guard
       started_at = Time.now
       @result = system("bundle exec rake db:test:clone")
       #::Guard::Notifier.notify( @result, :title => 'Cloned current schema in test db' ) #if notify?      
-      ended_at = Time.now      
-      UI.info "rake db:test:clone done in #{Time.now - started_at} seconds"
+      UI.info "rake db:test:clone ended  #{Time.now - started_at} seconds"
       @result
     end
         
