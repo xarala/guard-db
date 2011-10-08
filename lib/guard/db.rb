@@ -15,7 +15,7 @@ module Guard
     end
     
     def start
-      run_db_test_clone
+      true
     end
     
     def stop
@@ -23,11 +23,11 @@ module Guard
     end
     
     def reload
-      run_db_test_clone
+      true
     end
     
     def run_all
-      run_db_test_clone
+      true
     end
     
     def run_on_change(paths)
